@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+spec:
+  selector:
+    app: nginx-app
+    env: demo
+    type: nginx
+  type: NodePort                      # ClusterIP, NodePort, LoadBalancer, ExternalName
+  ports:
+  - nodePort: 30002
+    port: 80
+    targetPort: 80
