@@ -4,3 +4,5 @@ metadata:
   name: nginx-cm
 data:
   monitor: logger
+
+  
